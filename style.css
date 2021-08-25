@@ -34,5 +34,14 @@ main {
 }
 
 #trybewarts-forms-logo {
-  
+
+}
+
+.choose-family {
+  display: flex;
+}
+
+#your-family {
+  display: flex;
+  flex-direction: column;
 }
