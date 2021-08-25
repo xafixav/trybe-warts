@@ -12,14 +12,14 @@
 
 
 main #evaluation-form {
-  display: flex;  
+  display: flex;
   width: 675px;
-  flex-direction: column;  
+  flex-direction: column;
   flex-wrap: wrap;
 }
 
 main #evaluation-form #input-email {
-  flex-direction: column;  
+  flex-direction: column; 
 }
 
 main {
@@ -44,7 +44,7 @@ main {
 
 #input-name, #input-lastname, #input-email{
   width: 45%;
-  height: 16px;  
+  height: 16px;
 }
 
 #house {
