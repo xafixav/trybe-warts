@@ -49,3 +49,17 @@ main {
   width: 150px;
   height: 20px;
 }
+
+.choose-family {
+  display: flex;
+}
+
+#your-family {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
