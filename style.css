@@ -14,11 +14,12 @@
 main #evaluation-form {
   display: flex;  
   width: 675px;
-  flex-direction: row;
+  flex-direction: column;  
+  flex-wrap: wrap;
 }
 
 main #evaluation-form #input-email {
-  flex-direction: column;
+  flex-direction: column;  
 }
 
 main {
@@ -42,13 +43,15 @@ main {
 }
 
 #input-name, #input-lastname, #input-email{
-  width: 150px;
+  width: 45%;
   height: 16px;  
 }
+
 #house {
-  width: 150px;
+  width: 45.5%;
   height: 20px;
 }
+
 
 .choose-family {
   display: flex;
