@@ -34,7 +34,8 @@ main {
 }
 
 #trybewarts-forms-logo {
-
+  width: 500px;
+  height: 500px;
 }
 
 .choose-family {
@@ -42,6 +43,11 @@ main {
 }
 
 #your-family {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
   display: flex;
   flex-direction: column;
 }
