@@ -10,16 +10,14 @@
   margin: 0;
 }
 
-
 main #evaluation-form {
   display: flex;
   width: 675px;
   flex-direction: column;
-  flex-wrap: wrap;
 }
 
-main #evaluation-form #input-email {
-  flex-direction: column; 
+.input-area {
+  flex-direction: row;
 }
 
 main {
@@ -42,7 +40,7 @@ main {
   height: 500px;
 }
 
-#input-name, #input-lastname, #input-email{
+#input-name , #input-lastname , #input-email {
   width: 45%;
   height: 16px;
 }
@@ -52,7 +50,6 @@ main {
   height: 20px;
 }
 
-
 .choose-family {
   display: flex;
 }
@@ -60,9 +57,22 @@ main {
 #your-family {
   display: flex;
   flex-direction: column;
+  width: 45%;
+}
+
+#content {
+  width: 45%;
 }
 
 .container {
   display: flex;
   flex-direction: column;
+}
+
+hr {
+  margin: 20px 0;
+}
+
+#container-two {
+  display: flex;
 }

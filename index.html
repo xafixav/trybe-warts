@@ -21,16 +21,19 @@
     <main>
         <div class="container">
             <form id="evaluation-form">
-                <input id="input-name" placeholder="Nome">
-                <input id="input-lastname" placeholder="Sobrenome">
-                <input id="input-email" placeholder="Email">
-                <select id="house">
-                    <option id="gitnoria-house" value="Gitnória">Gitnória</option>
-                    <option id="reactpuff-house" value="Reactpuff">Reactpuff</option>
-                    <option id="corvinode-house" value="Corvinode">Corvinode</option>
-                    <option id="pytherina-house" value="Pytherina">Pytherina</option>
-                </select>
-                <section>
+                <section class="input-area">
+                    <input id="input-name" placeholder="Nome">
+                    <input id="input-lastname" placeholder="Sobrenome">
+                    <input id="input-email" placeholder="Email">
+                    <select id="house">
+                        <option id="gitnoria-house" value="Gitnória">Gitnória</option>
+                        <option id="reactpuff-house" value="Reactpuff">Reactpuff</option>
+                        <option id="corvinode-house" value="Corvinode">Corvinode</option>
+                        <option id="pytherina-house" value="Pytherina">Pytherina</option>
+                    </select>
+                </section>
+                <hr>
+                <section id="container-two">
                     <div id="your-family">
                         <p id="label-family">Qual sua família?</p>
                         <div class="choose-family">
@@ -44,6 +47,33 @@
                         <div class="choose-family">
                             <input type="radio" name="family" id="fullstack" value="FullStack">
                             <label for="fullstack">Família FullStack</label>
+                        </div>
+                    </div>
+                    <div id="content">
+                        <p id="label-content">Qual conteúdo você está com mais vontade de aprender?</p>
+                        <div class="check-content">
+                            <input type="checkbox" id="hofs" value="HoFs">
+                            <label for="hofs">HoFs</label>
+                        </div>
+                        <div class="check-content">
+                            <input type="checkbox" id="jest" value="Jest">
+                            <label for="jest">Jest</label>
+                        </div>
+                        <div class="check-content">
+                            <input type="checkbox" id="promises" value="Promises">
+                            <label for="promises">Promises</label>
+                        </div>
+                        <div class="check-content">
+                            <input type="checkbox" id="react" value="React">
+                            <label for="react">React</label>
+                        </div>
+                        <div class="check-content">
+                            <input type="checkbox" id="sql" value="SQL">
+                            <label for="sql">SQL</label>
+                        </div>
+                        <div class="check-content">
+                            <input type="checkbox" id="python" value="Python">
+                            <label for="python">Python</label>
                         </div>
                     </div>
                 </section>
