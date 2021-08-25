@@ -2,9 +2,15 @@
   display: flex;
   background-color: rgb(50, 167, 145);
   height: 70px;
+  justify-content: space-between;
 }
 
 * {
     padding: 0 0;
     margin: 0 0;
+}
+
+.trybewarts-login {
+  display: flex;
+  align-items: center;
 }
