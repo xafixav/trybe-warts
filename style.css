@@ -52,6 +52,8 @@ main {
 
 .choose-family {
   display: flex;
+  padding-top: 20px;
+  align-items: center;
 }
 
 #your-family {
@@ -62,6 +64,12 @@ main {
 
 #content {
   width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.check-content {
+  width: 30%;
 }
 
 .container {
