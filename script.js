@@ -24,7 +24,7 @@ const stringObservation = 'Observações: ';
 let form = {};
 
 function login() {
-  if (emailInput.value === 'tryber@teste.com' && passwordInput.value === '123456') {
+  if (emailInput.value === 'tryber@teste.com' && passwordInput.value === '123456') {         
     alert('Olá, Tryber!');
   } else {
     alert('Email ou senha inválidos.');
