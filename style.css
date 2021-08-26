@@ -93,3 +93,13 @@ hr {
 #avaliator {
   margin-bottom: 20px;
 }
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: #577590;
+  color: white;
+  margin-top: 100px;
+  text-align: center;
+  padding: 10px;
+}
