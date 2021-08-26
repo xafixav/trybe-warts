@@ -39,3 +39,40 @@ function countChar() {
 }
 
 comments.addEventListener('input', countChar);
+
+// temas
+
+const house = document.getElementById('house');
+const header = document.getElementById('header');
+const title = document.getElementById('trybewarts-header-title');
+
+function applyTheme() {
+  if (house.value === 'Gitnória') {
+    header.style.backgroundColor = 'rgb(233, 84, 32)';
+    title.style.color = 'rgb(51, 51, 51)';
+    btnLogin.style.backgroundColor = 'rgb(51, 51, 51)';
+    button.style.backgroundColor = 'rgb(51, 51, 51)';
+  } else if (house.value === 'Reactpuff') {
+    header.style.backgroundColor = 'rgb(94, 141, 210)';
+    title.style.color = 'rgb(58, 221, 255)';
+    btnLogin.style.backgroundColor = 'rgb(58, 221, 255)';
+    button.style.backgroundColor = 'rgb(58, 221, 255)';
+  } else if (house.value === 'Corvinode') {
+    header.style.backgroundColor = 'rgb(44, 160, 89)';
+    title.style.color = 'rgb(85, 34, 0)';
+    btnLogin.style.backgroundColor = 'rgb(85, 34, 0)';
+    button.style.backgroundColor = 'rgb(85, 34, 0)';
+  } else if (house.value === 'Pytherina') {
+    header.style.backgroundColor = 'rgb(255, 221, 85)';
+    title.style.color = 'rgb(42, 127, 255)';
+    btnLogin.style.backgroundColor = 'rgb(42, 127, 255)';
+    button.style.backgroundColor = 'rgb(42, 127, 255)';
+  } else {
+    header.style.backgroundColor = 'rgb(50, 167, 145)';
+    title.style.color = 'white';
+    btnLogin.style.backgroundColor = 'darkslateblue';
+    button.style.backgroundColor = 'darkslateblue';
+  }
+}
+
+house.addEventListener('change', applyTheme);
