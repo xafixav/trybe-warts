@@ -8,6 +8,7 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Philosopher', sans-serif;
 }
 
 main #evaluation-form {
@@ -28,11 +29,30 @@ main {
 .trybewarts-login {
   display: flex;
   align-items: center;
+  /* font-family: 'Philosopher', sans-serif; */
+}
+
+.trybewarts-login input {
+  height: 30px;
+  border-radius: 5px;
+  border: 0;
+  margin: 0 5px;
+}
+
+.trybewarts-login button {
+  height: 30px;
+  border-radius: 5px;
+  border: 0;
+  margin: 0 5px;
+  padding: 0 50px;
+  background-color: rgb(72,61,139);
+  color: white;
 }
 
 #trybewarts-header-title {
   display: flex;
   align-self: center;
+  color: white;
 }
 
 #trybewarts-forms-logo {
