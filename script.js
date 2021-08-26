@@ -4,6 +4,7 @@ const passwordInput = document.getElementById('password');
 const getAgreementValue = document.getElementById('agreement');
 const button = document.getElementById('submit-btn');
 const getInputRate = document.getElementsByClassName('input-rate');
+const getFooter = document.getElementsByTagName('footer')[0];
 let getText = [];
 let getInputRateValue;
 let getFamily;
@@ -136,6 +137,7 @@ function applyGit() {
   title.style.color = colorGit;
   btnLogin.style.backgroundColor = colorGit;
   button.style.backgroundColor = colorGit;
+  getFooter.style.backgroundColor = colorGit;
 }
 
 function applyReactPuff() {
@@ -144,6 +146,7 @@ function applyReactPuff() {
   title.style.color = colorReact;
   btnLogin.style.backgroundColor = colorReact;
   button.style.backgroundColor = colorReact;
+  getFooter.style.backgroundColor = colorReact;
 }
 
 function applyCorvinode() {
@@ -152,6 +155,7 @@ function applyCorvinode() {
   title.style.color = colorCorvi;
   btnLogin.style.backgroundColor = colorCorvi;
   button.style.backgroundColor = colorCorvi;
+  getFooter.style.backgroundColor = colorCorvi;
 }
 
 function applyPytherina() {
@@ -160,13 +164,16 @@ function applyPytherina() {
   title.style.color = colorPytherina;
   btnLogin.style.backgroundColor = colorPytherina;
   button.style.backgroundColor = colorPytherina;
+  getFooter.style.backgroundColor = colorPytherina;
 }
 
 function restoreOriginal() {
   header.style.backgroundColor = 'rgb(50, 167, 145)';
   title.style.color = 'white';
-  btnLogin.style.backgroundColor = 'darkslateblue';
-  button.style.backgroundColor = 'darkslateblue';
+  const defaultColor = 'darkslateblue';
+  btnLogin.style.backgroundColor = defaultColor;
+  button.style.backgroundColor = defaultColor;
+  getFooter.style.backgroundColor = 'rgb(95, 99, 134)';
 }
 function applyTheme() {
   if (house.value === 'Gitnória') {
