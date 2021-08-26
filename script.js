@@ -19,7 +19,6 @@ function showButton() {
   button.classList.remove('isHidden');
   if (getAgreementValue.checked === false) {
     button.classList.add('isHidden');
-    
   }
 }
 
