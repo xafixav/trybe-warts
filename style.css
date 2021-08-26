@@ -87,4 +87,9 @@ hr {
 
 #container-three {
   display: flex;
+  flex-direction: column;
+}
+
+#avaliator {
+  margin-bottom: 20px;
 }
