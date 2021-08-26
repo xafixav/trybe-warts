@@ -3,7 +3,7 @@ const emailInput = document.getElementById('email');
 const passwordInput = document.getElementById('password');
 const getAgreementValue = document.getElementById('agreement');
 const button = document.getElementById('submit-btn');
-let getInputRate = document.getElementsByClassName('input-rate');
+const getInputRate = document.getElementsByClassName('input-rate');
 let getText = [];
 let getInputRateValue;
 let getFamily;
@@ -13,7 +13,14 @@ let getLastName = [];
 let getEmail = [];
 let getHouse = [];
 const space = ' ';
-
+const virgula = ',';
+const stringName = 'Nome: ';
+const stringEmail = 'Email: ';
+const stringHouse = 'Casa: ';
+const stringFamily = 'Família: ';
+const stringContent = 'Matérias: ';
+const stringAvaliation = 'Avaliação: ';
+const stringObservation = 'Observações: ';
 let form = {};
 
 function login() {
@@ -37,7 +44,7 @@ function showButton() {
 getAgreementValue.addEventListener('click', showButton);
 
 function getTrybeWartsRate() {
-  for (let i = 0; i < getInputRate.length ; i += 1) {
+  for (let i = 0; i < getInputRate.length; i += 1) {
     const check = getInputRate[i].checked;
     if (check === true) {
       getInputRateValue = document.getElementsByClassName('input-rate')[i].value;
@@ -50,19 +57,19 @@ function getFamilySelected() {
   const getBackEnd = document.getElementById('backend').checked;
   const getFullStack = document.getElementById('fullstack').checked;
   if (getFrontEnd === true) {
-    getFamily = 'Família Front-End';
+    getFamily = 'Frontend';
   } else if (getBackEnd === true) {
-    getFamily = 'Família Back-End';
+    getFamily = 'Backend';
   } else if (getFullStack === true) {
-    getFamily = 'Família Full-Stack';
+    getFamily = 'Fullstack';
   }
 }
 
 function getHypeLessons() {
-  const content2 = document.getElementById('content').querySelectorAll('input');  
-  for (let i = 0; i < content2.length ; i+=1) {    
-    if (content2[i].checked === true && content2[i] !== undefined) {
-      conteudos += content2[i].value + space;
+  const content2 = document.getElementById('content').querySelectorAll('input');
+  for (let i = 0; i < content2.length; i += 1) {
+    if (content2[i].checked === true) {
+      conteudos += content2[i].value + virgula + space;
     }
   }
 }
@@ -88,16 +95,33 @@ function createDiv(event) {
   const box = document.createElement('div');
   const getForm = document.getElementsByTagName('form')[1];
   getForm.appendChild(box);
+
   form = [
-    "Nome: " + getName + getLastName,
-    getEmail + space,
-    getHouse + space,
-    getFamily + space,
-    conteudos + space,
-    getInputRateValue + space,
-    getText + space,
+    stringName + getName + getLastName,
+    stringEmail + getEmail + space,
+    stringHouse + getHouse + space,
+    stringFamily + getFamily + space,
+    stringContent + conteudos + space,
+    stringAvaliation + getInputRateValue + space,
+    stringObservation + getText + space,
   ];
   box.innerText = form;
 }
 
-button.addEventListener('click', createDiv, false)
+button.addEventListener('click', createDiv, false);
+
+// contador
+
+const comments = document.getElementById('textarea');
+const count = document.getElementById('counter');
+
+function countChar() {
+  const limit = 500;
+  const typed = comments.value.length;
+  const rest = limit - typed;
+  const text = ' caracteres restantes';
+
+  count.innerText = rest + text;
+}
+
+comments.addEventListener('input', countChar);
