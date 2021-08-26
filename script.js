@@ -2,7 +2,7 @@ const btnLogin = document.getElementById('button-login');
 const emailInput = document.getElementById('email');
 const passwordInput = document.getElementById('password');
 const getAgreementValue = document.getElementById('agreement');
-const getAgreementSection = document.getElementById('label-agreement');
+const button = document.getElementById('submit-btn');
 
 function login() {
   if (emailInput.value === 'tryber@teste.com' && passwordInput.value === '123456') {
@@ -13,17 +13,14 @@ function login() {
 }
 
 btnLogin.addEventListener('click', login);
-getAgreementValue.addEventListener('click', createButton);
 
-function createButton() {
-  const button = document.createElement('button');
-  button.setAttribute('id', 'submit-btn');
-  button.innerText += 'Enviar';
-  getAgreementSection.appendChild(button);  
+function showButton() {
+  button.removeAttribute('disabled');
+  button.classList.remove('isHidden');
+  if (getAgreementValue.checked === false) {
+    button.classList.add('isHidden');
+    
+  }
 }
 
-if (getAgreementValue.checked === true) {
-  createButton();
-} else {
-  getAgreementValue.remove
-}
+getAgreementValue.addEventListener('click', showButton);

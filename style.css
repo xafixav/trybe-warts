@@ -108,3 +108,10 @@ hr {
   display: flex;
   flex-direction: row;
 }
+
+#submit-btn {
+  margin-left: 15px;
+}
+.isHidden {
+  visibility: hidden;
+}
