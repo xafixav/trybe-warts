@@ -67,7 +67,7 @@ function getFamilySelected() {
 
 function getHypeLessons() {
   const content2 = document.getElementById('content').querySelectorAll('input');
-  for (let i = 0; i < content2.length; i += 1) {
+  for (let i = 0; i < content2.length; i += 1) {    
     if (content2[i].checked === true) {
       conteudos += content2[i].value + virgula + space;
     }
