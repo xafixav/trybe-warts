@@ -8,7 +8,7 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Philosopher', sans-serif;
+  font-family: "Philosopher", sans-serif;
 }
 
 main #evaluation-form {
@@ -32,20 +32,20 @@ main {
   align-items: center;
 }
 
-.trybewarts-login input, #input-name , #input-lastname , #input-email, #house {
+.trybewarts-login input , #input-name , #input-lastname , #input-email , #house {
   height: 30px;
   border-radius: 5px;
   border: 0;
   margin: 0 5px;
 }
 
-.trybewarts-login button, #submit-btn {
+.trybewarts-login button , #submit-btn {
   height: 30px;
   border-radius: 5px;
   border: 0;
   margin: 0 5px;
   padding: 0 50px;
-  background-color: rgb(72,61,139);
+  background-color: darkslateblue;
   color: white;
 }
 
@@ -66,7 +66,7 @@ main {
   height: 500px;
 }
 
-#input-name , #input-lastname , #input-email, #house {
+#input-name , #input-lastname , #input-email , #house {
   width: 45%;
   margin: 10px 5px;
 }
