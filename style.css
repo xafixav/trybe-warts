@@ -39,7 +39,7 @@ main {
   margin: 0 5px;
 }
 
-.trybewarts-login button {
+.trybewarts-login button, #submit-btn {
   height: 30px;
   border-radius: 5px;
   border: 0;
@@ -95,6 +95,8 @@ main {
 
 .check-content {
   width: 30%;
+  display: flex;
+  align-items: center;
 }
 
 .container {
@@ -117,6 +119,8 @@ hr {
 
 #avaliator {
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .footer {
@@ -130,12 +134,9 @@ hr {
 
 #label-agreement {
   display: flex;
-  flex-direction: row;
   margin-bottom: 30px;
-}
-
-#submit-btn {
-  margin-left: 15px;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .isHidden {
