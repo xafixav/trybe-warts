@@ -67,7 +67,7 @@ function getFamilySelected() {
 
 function getHypeLessons() {
   const content2 = document.getElementById('content').querySelectorAll('input');
-  for (let i = 0; i < content2.length; i += 1) {    
+  for (let i = 0; i < content2.length; i += 1) {
     if (content2[i].checked === true) {
       conteudos += content2[i].value + virgula + space;
     }
@@ -130,32 +130,55 @@ const house = document.getElementById('house');
 const header = document.getElementById('header');
 const title = document.getElementById('trybewarts-header-title');
 
+function applyGit() {
+  header.style.backgroundColor = 'rgb(233, 84, 32)';
+  const colorGit = 'rgb(51, 51, 51)';
+  title.style.color = colorGit;
+  btnLogin.style.backgroundColor = colorGit;
+  button.style.backgroundColor = colorGit;
+}
+
+function applyReactPuff() {
+  header.style.backgroundColor = 'rgb(94, 141, 210)';
+  const colorReact = 'rgb(58, 221, 255)';
+  title.style.color = colorReact;
+  btnLogin.style.backgroundColor = colorReact;
+  button.style.backgroundColor = colorReact;
+}
+
+function applyCorvinode() {
+  header.style.backgroundColor = 'rgb(44, 160, 89)';
+  const colorCorvi = 'rgb(85, 34, 0)';
+  title.style.color = colorCorvi;
+  btnLogin.style.backgroundColor = colorCorvi;
+  button.style.backgroundColor = colorCorvi;
+}
+
+function applyPytherina() {
+  header.style.backgroundColor = 'rgb(255, 221, 85)';
+  const colorPytherina = 'rgb(42, 127, 255)';
+  title.style.color = colorPytherina;
+  btnLogin.style.backgroundColor = colorPytherina;
+  button.style.backgroundColor = colorPytherina;
+}
+
+function restoreOriginal() {
+  header.style.backgroundColor = 'rgb(50, 167, 145)';
+  title.style.color = 'white';
+  btnLogin.style.backgroundColor = 'darkslateblue';
+  button.style.backgroundColor = 'darkslateblue';
+}
 function applyTheme() {
   if (house.value === 'Gitnória') {
-    header.style.backgroundColor = 'rgb(233, 84, 32)';
-    title.style.color = 'rgb(51, 51, 51)';
-    btnLogin.style.backgroundColor = 'rgb(51, 51, 51)';
-    button.style.backgroundColor = 'rgb(51, 51, 51)';
+    applyGit();
   } else if (house.value === 'Reactpuff') {
-    header.style.backgroundColor = 'rgb(94, 141, 210)';
-    title.style.color = 'rgb(58, 221, 255)';
-    btnLogin.style.backgroundColor = 'rgb(58, 221, 255)';
-    button.style.backgroundColor = 'rgb(58, 221, 255)';
+    applyReactPuff();
   } else if (house.value === 'Corvinode') {
-    header.style.backgroundColor = 'rgb(44, 160, 89)';
-    title.style.color = 'rgb(85, 34, 0)';
-    btnLogin.style.backgroundColor = 'rgb(85, 34, 0)';
-    button.style.backgroundColor = 'rgb(85, 34, 0)';
+    applyCorvinode();
   } else if (house.value === 'Pytherina') {
-    header.style.backgroundColor = 'rgb(255, 221, 85)';
-    title.style.color = 'rgb(42, 127, 255)';
-    btnLogin.style.backgroundColor = 'rgb(42, 127, 255)';
-    button.style.backgroundColor = 'rgb(42, 127, 255)';
+    applyPytherina();
   } else {
-    header.style.backgroundColor = 'rgb(50, 167, 145)';
-    title.style.color = 'white';
-    btnLogin.style.backgroundColor = 'darkslateblue';
-    button.style.backgroundColor = 'darkslateblue';
+    restoreOriginal();
   }
 }
 
