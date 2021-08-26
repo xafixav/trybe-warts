@@ -97,7 +97,7 @@ hr {
 .footer {
   display: flex;
   justify-content: center;
-  background-color: #577590;
+  background-color: rgb(95, 99, 134);
   color: white;
   margin-top: 100px;
   text-align: center;
