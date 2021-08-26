@@ -110,8 +110,6 @@ function createDiv(event) {
 
 button.addEventListener('click', createDiv, false);
 
-// contador
-
 const comments = document.getElementById('textarea');
 const count = document.getElementById('counter');
 
