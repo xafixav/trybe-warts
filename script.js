@@ -23,3 +23,19 @@ function showButton() {
 }
 
 getAgreementValue.addEventListener('click', showButton);
+
+// contador
+
+const comments = document.getElementById('textarea');
+const count = document.getElementById('counter');
+
+function countChar() {
+  const limit = 500;
+  const typed = comments.value.length;
+  const rest = limit - typed;
+  const text = ' caracteres restantes';
+
+  count.innerText = rest + text;
+}
+
+comments.addEventListener('input', countChar);
