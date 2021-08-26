@@ -23,16 +23,16 @@ main #evaluation-form {
 
 main {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  background-color: rgb(230, 230, 230);
 }
 
 .trybewarts-login {
   display: flex;
   align-items: center;
-  /* font-family: 'Philosopher', sans-serif; */
 }
 
-.trybewarts-login input {
+.trybewarts-login input, #input-name , #input-lastname , #input-email, #house {
   height: 30px;
   border-radius: 5px;
   border: 0;
@@ -55,19 +55,24 @@ main {
   color: white;
 }
 
+#title-form {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
 #trybewarts-forms-logo {
   width: 500px;
   height: 500px;
 }
 
-#input-name , #input-lastname , #input-email {
+#input-name , #input-lastname , #input-email, #house {
   width: 45%;
-  height: 16px;
+  margin: 10px 5px;
 }
 
 #house {
-  width: 45.5%;
-  height: 20px;
+  background-color: white;
 }
 
 .choose-family {
@@ -119,7 +124,6 @@ hr {
   justify-content: center;
   background-color: rgb(95, 99, 134);
   color: white;
-  margin-top: 100px;
   text-align: center;
   padding: 10px;
 }
@@ -127,6 +131,7 @@ hr {
 #label-agreement {
   display: flex;
   flex-direction: row;
+  margin-bottom: 30px;
 }
 
 #submit-btn {
