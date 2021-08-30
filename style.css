@@ -149,3 +149,8 @@ hr {
   opacity: 60%;
   margin-bottom: 5px;
 }
+
+.end-form {
+  font-size: xx-large;
+  font-family: 'Courier New', Courier, monospace;
+}

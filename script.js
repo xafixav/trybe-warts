@@ -13,16 +13,9 @@ let getName = [];
 let getLastName = [];
 let getEmail = [];
 let getHouse = [];
-const space = ' ';
-const virgula = ',';
-const stringName = 'Nome: ';
-const stringEmail = 'Email: ';
-const stringHouse = 'Casa: ';
-const stringFamily = 'Família: ';
-const stringContent = 'Matérias: ';
-const stringAvaliation = 'Avaliação: ';
-const stringObservation = 'Observações: ';
-let form = {};
+const getForm = document.getElementsByTagName('form')[1];
+
+// login
 
 function login() {
   if (emailInput.value === 'tryber@teste.com' && passwordInput.value === '123456') {
@@ -34,24 +27,33 @@ function login() {
 
 btnLogin.addEventListener('click', login);
 
+// mostra ou esconde o botao `enviar`
+
 function showButton() {
   button.removeAttribute('disabled');
   button.classList.remove('isHidden');
   if (getAgreementValue.checked === false) {
     button.classList.add('isHidden');
+    button.setAttribute('disabled', '');
   }
 }
 
 getAgreementValue.addEventListener('click', showButton);
+
+// captura a nota de 1 a 10
 
 function getTrybeWartsRate() {
   for (let i = 0; i < getInputRate.length; i += 1) {
     const check = getInputRate[i].checked;
     if (check === true) {
       getInputRateValue = document.getElementsByClassName('input-rate')[i].value;
+    } else {
+      getInputRateValue = 'Nos informe a Avaliação';
     }
   }
 }
+
+// captura a familia selecionada
 
 function getFamilySelected() {
   const getFrontEnd = document.getElementById('frontend').checked;
@@ -63,53 +65,69 @@ function getFamilySelected() {
     getFamily = 'Backend';
   } else if (getFullStack === true) {
     getFamily = 'Fullstack';
+  } else {
+    getFamily = 'Selecione uma Família';
   }
 }
+
+// adiciona na let conteudos as licoes que quer aprender
 
 function getHypeLessons() {
   const content2 = document.getElementById('content').querySelectorAll('input');
   for (let i = 0; i < content2.length; i += 1) {
     if (content2[i].checked === true) {
-      conteudos += content2[i].value + virgula + space;
+      conteudos += `${content2[i].value}, `;
     }
   }
 }
 
-function getFirstInput() {
-}
+// monta todas adiciona o conteudo em todas as lets que serao utilizadas
 
 function createObjectList() {
   getTrybeWartsRate();
   getFamilySelected();
   getHypeLessons();
-  getFirstInput();
-  getName = space + document.getElementById('input-name').value;
-  getLastName = space + document.getElementById('input-lastname').value;
-  getEmail = space + document.getElementById('input-email').value;
-  getHouse = space + document.getElementById('house').value;
-  getText = space + document.getElementById('textarea').value;
+  getName = ` ${document.getElementById('input-name').value}`;
+  getLastName = ` ${document.getElementById('input-lastname').value}`;
+  getEmail = ` ${document.getElementById('input-email').value}`;
+  getHouse = ` ${document.getElementById('house').value}`;
+  getText = ` ${document.getElementById('textarea').value}`;
 }
+
+// cria a div onde ficara o resultado do formulario
 
 function createDiv(event) {
   createObjectList();
   event.preventDefault();
   const box = document.createElement('div');
-  const getForm = document.getElementsByTagName('form')[1];
+  box.setAttribute('class', 'end-form');
   getForm.appendChild(box);
-
-  form = [
-    stringName + getName + getLastName,
-    stringEmail + getEmail + space,
-    stringHouse + getHouse + space,
-    stringFamily + getFamily + space,
-    stringContent + conteudos + space,
-    stringAvaliation + getInputRateValue + space,
-    stringObservation + getText + space,
+  const form = [
+    `Nome: ${getName} ${getLastName}
+    Email: ${getEmail}
+    Casa: ${getHouse}
+    Família: ${getFamily}
+    Matérias: ${conteudos}
+    Avaliação: ${getInputRateValue}
+    Observações: ${getText}`,
   ];
   box.innerText = form;
+  conteudos = [];
+}
+
+// remove formularios extras, para evitar poluicao
+
+function removeDiv() {
+  const boxOld = document.getElementsByClassName('end-form');
+  if (boxOld.length > 1) {
+    boxOld[0].remove();
+  }
 }
 
 button.addEventListener('click', createDiv, false);
+button.addEventListener('click', removeDiv, false);
+
+// contador de Caracteres:
 
 const comments = document.getElementById('textarea');
 const count = document.getElementById('counter');
@@ -123,7 +141,7 @@ function countChar() {
   count.innerText = rest + text;
 }
 
-comments.addEventListener('input', countChar);
+comments.addEventListener('keyup', countChar);
 
 // temas
 
